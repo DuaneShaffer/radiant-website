@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Here? | Radiant Church Fairbanks</title>
+  <meta name="description" content="Planning your first visit to Radiant Church Fairbanks? Here's everything you need to know.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">First Visit</span>
+    <h1>New Here? Welcome.</h1>
+    <p>We're glad you're considering visiting. Here's everything you need to feel at home before you walk through the door.</p>
+  </div>
+</header>
+
+<!-- QUICK FACTS -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col">
+      <div data-aos="fade-right">
+        <span class="section-label">The Basics</span>
+        <h2>What to know before you come</h2>
+        <div class="mt-3">
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="info-row-text"><strong>When</strong><span>Sundays at 11:00 AM. Services typically last about 75–80 minutes.</span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="info-row-text"><strong>Where</strong><span>949 Farmers Loop Road, Fairbanks, AK 99709. Free parking on site.</span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="info-row-text"><strong>What to Wear</strong><span>Come as you are — you'll see everything from jeans to Sunday best. There's no dress code.</span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+            <div class="info-row-text"><strong>For Your Kids</strong><span>Family Ministry is available for children during the service. Check-in is easy through the Church Center app.</span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19V6l12-3v13M9 19c0 1.1-1.34 2-3 2s-3-.9-3-2 1.34-2 3-2 3 .9 3 2zm12-3c0 1.1-1.34 2-3 2s-3-.9-3-2 1.34-2 3-2 3 .9 3 2z"/></svg></div>
+            <div class="info-row-text"><strong>The Service</strong><span>Expect contemporary worship music, communion most Sundays, and a Bible-based message that's both honest and accessible.</span></div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="card-featured">
+          <span class="series-label">Let Us Know You're Coming</span>
+          <h3>We'd love to say hello</h3>
+          <p>Drop us a note before your first visit. We'll make sure someone watches for you and gives you a proper welcome — no pressure, just hospitality.</p>
+          <a href="mailto:admin@radiantfairbanks.org?subject=Planning my first visit" class="btn btn-primary">Email Us</a>
+          <p style="margin-top:1rem;font-size:0.875rem;color:rgba(255,255,255,0.6);">Or just show up — you're always welcome.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-label">The Experience</span>
+      <h2>What a Sunday looks like</h2>
+    </div>
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+          <h3>Arrive &amp; Connect</h3>
+          <p>Plan to arrive a few minutes early. Our welcome team will greet you at the door, help with kids' check-in, and point you to coffee. No pressure to introduce yourself — just settle in.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19V6l12-3v13M9 19c0 1.1-1.34 2-3 2s-3-.9-3-2 1.34-2 3-2 3 .9 3 2z"/></svg></div>
+          <h3>Worship Together</h3>
+          <p>We sing, take communion, and give — all as acts of worship. If singing isn't your thing, just stand with us. The words are displayed on screen and there's no performance expected.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+          <h3>Hear the Word</h3>
+          <p>The message is the heart of the service — a verse-by-verse walk through Scripture that's honest, practical, and centered on the Gospel. Bring a Bible, or follow along on your phone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ TEASER -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col">
+      <div data-aos="fade-right">
+        <span class="section-label">Common Questions</span>
+        <h2>You probably have questions</h2>
+        <p>That's completely normal. We've answered the most common ones on our FAQ page — from what to do with your kids to what we believe about money and giving.</p>
+        <a href="faq.html" class="btn btn-primary mt-4">Read the FAQ</a>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="80">
+        <div class="accordion" x-data="{ active: null }">
+          <div class="accordion-item">
+            <button class="accordion-trigger" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1">
+              Do I need to be a Christian to come?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accordion-body" x-show="active === 1" x-transition>
+              <p>Not at all. Wherever you are on your spiritual journey — curious, skeptical, or somewhere in between — you are genuinely welcome here.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2">
+              Will I be asked to give money?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accordion-body" x-show="active === 2" x-transition>
+              <p>Giving is part of our worship, but it's for members and regular attenders — not guests. If an offering plate comes by, just pass it along.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3">
+              What happens with my kids?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accordion-body" x-show="active === 3" x-transition>
+              <p>We have Family Ministry for children during the service. Kids are checked in securely through the Church Center app. You can also keep them with you — both are great options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2 data-aos="fade-up">Ready to visit?</h2>
+    <p data-aos="fade-up" data-aos-delay="60">We meet every Sunday at 11am at 949 Farmers Loop Road, Fairbanks. We'd love to see you this week.</p>
+    <div class="btn-row btn-row--center" data-aos="fade-up" data-aos-delay="120">
+      <a href="gather.html" class="btn btn-primary">Service Info &amp; Map</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a>
+        <p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p>
+      <p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

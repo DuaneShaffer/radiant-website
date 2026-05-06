@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermons | Radiant Church Fairbanks</title>
+  <meta name="description" content="Watch and listen to sermons from Radiant Church Fairbanks. Currently teaching through the Book of Romans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .sermon-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .sermon-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .sermon-thumb {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--eggplant), var(--eggplant-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      position: relative;
+    }
+    .sermon-thumb svg { width: 48px; height: 48px; }
+    .sermon-thumb .play-btn {
+      position: absolute;
+      width: 52px; height: 52px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      transition: transform var(--transition), background var(--transition);
+    }
+    .sermon-card:hover .play-btn { transform: scale(1.1); background: var(--orange-dark); }
+    .sermon-play-icon { width: 20px; height: 20px; margin-left: 3px; }
+    .sermon-body { padding: 1.4rem; }
+    .sermon-body .series-label { margin-bottom: 0.4rem; }
+    .sermon-body h4 { margin-bottom: 0.3rem; font-size: 1.05rem; }
+    .sermon-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .video-embed { aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+    .video-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+    .platform-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .platform-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .platform-icon {
+      width: 56px; height: 56px;
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(244,104,41,0.1);
+      color: var(--orange);
+    }
+    .platform-icon svg { width: 28px; height: 28px; }
+    .platform-card h3 { font-size: 1.15rem; margin: 0; }
+    .platform-card p { color: var(--text-muted); font-size: 0.9rem; margin: 0; max-width: 26ch; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">God's Word</span>
+    <h1>Sermons</h1>
+    <p>Verse-by-verse teaching through Scripture, available to watch and listen wherever you are.</p>
+  </div>
+</header>
+
+<!-- CURRENT SERIES -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Now Teaching</span>
+      <h2>Current Series: The Book of Romans</h2>
+    </div>
+    <div class="two-col two-col--wide" data-aos="fade-up" data-aos-delay="80">
+      <div>
+        <!-- Playlist embed — always shows the first video in the playlist. Keep newest sermon at the top of the playlist on YouTube. -->
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed?listType=playlist&list=PLEWJuYST1lj76Z55Qt1dcSCUNLGE-RRcm&rel=0"
+            title="The Book of Romans — Radiant Church Fairbanks"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <span class="series-label">Current Series</span>
+        <h3 style="font-size:1.6rem;margin-bottom:0.75rem;">The Book of Romans</h3>
+        <p>Paul's letter to the Romans is the most comprehensive presentation of the Gospel in all of Scripture. We're working through it verse-by-verse, exploring the righteousness of God, the power of the Gospel for salvation, and what it looks like to live by faith in every area of life.</p>
+        <p>Taught by Ben Widman.</p>
+        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="btn btn-primary">Full Playlist on YouTube</a>
+          <a href="https://radiantfairbanks.churchcenter.com" target="_blank" rel="noopener" class="btn btn-outline-dark">Church Center Archive</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT MESSAGES -->
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Recent Messages</span>
+      <h2>Latest from Romans</h2>
+    </div>
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <div class="play-btn">
+            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="sermon-body">
+          <span class="series-label">Romans</span>
+          <h4>His Promise is Worth Your Belief</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; April 26, 2026</p>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+        </div>
+      </div>
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <div class="play-btn">
+            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="sermon-body">
+          <span class="series-label">Romans</span>
+          <h4>Justified by Faith, Not Works</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; April 19, 2026</p>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+        </div>
+      </div>
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <div class="play-btn">
+            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="sermon-body">
+          <span class="series-label">Romans</span>
+          <h4>The Wrath and the Mercy of God</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; April 12, 2026</p>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO WATCH -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-label">Watch &amp; Listen</span>
+      <h2>Find sermons on your platform</h2>
+    </div>
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
+      <div class="platform-card">
+        <div class="platform-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </div>
+        <h3>YouTube</h3>
+        <p>Live streams every Sunday and full sermon archive</p>
+        <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="btn btn-primary">Subscribe</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Church Center</h3>
+        <p>Full archive with artwork, notes, and series playlists</p>
+        <a href="https://radiantfairbanks.churchcenter.com" target="_blank" rel="noopener" class="btn btn-primary">Open App</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+        </div>
+        <h3>In Person</h3>
+        <p>Join us Sunday at 11am — the best way to experience the message in community</p>
+        <a href="gather.html" class="btn btn-primary">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a>
+        <p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p>
+      <p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

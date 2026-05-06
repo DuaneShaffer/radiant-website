@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctrines &amp; Beliefs | Radiant Church Fairbanks</title>
+  <meta name="description" content="Read the full statement of faith for Radiant Church Fairbanks — our core convictions about the Gospel, salvation, the Holy Spirit, and mission.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">What We Believe</span>
+    <h1>Doctrines &amp; Beliefs</h1>
+    <p>We believe that who God is and what He has done defines who we are and how we live.</p>
+  </div>
+</header>
+
+<!-- CORE CONVICTIONS -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col two-col--wide">
+      <div data-aos="fade-right">
+        <span class="section-label">Five Core Emphases</span>
+        <h2>What shapes us as a church</h2>
+        <p>Radiant Church is committed to the Lausanne Covenant Statement of Faith. From that foundation, five theological convictions shape everything we do:</p>
+        <ol style="margin-top:1.5rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:0.9rem;">
+          <li>The Gospel of Jesus Christ is central to our motivation and practice.</li>
+          <li>God acts sovereignly in saving sinners.</li>
+          <li>The continuing presence of the Holy Spirit equips and empowers the saints.</li>
+          <li>God created men and women as equal and complementary image bearers of God.</li>
+          <li>All believers are sent on Jesus' mission to make disciples.</li>
+        </ol>
+      </div>
+      <div class="pull-quote" data-aos="fade-left" data-aos-delay="100">
+        <blockquote>"We believe that who God is and what He has done defines who we are and how we live."</blockquote>
+        <cite>— Radiant Church Statement of Faith</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED DOCTRINES -->
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-label">Full Statement</span>
+      <h2>Our doctrinal convictions</h2>
+      <p>Each conviction below reflects our understanding of Scripture and shapes how we teach, lead, and live together.</p>
+    </div>
+
+    <div class="content-narrow" style="display:flex;flex-direction:column;gap:2.5rem;" data-aos="fade-up" data-aos-delay="80">
+
+      <div class="belief-card">
+        <h3>The Gospel</h3>
+        <p>The Gospel is the good news of what God has graciously accomplished for sinners through the sinless life, sacrificial death, and bodily resurrection of His Son, our Savior, Jesus Christ. Through Christ we receive forgiveness from sin and complete justification before God. Christ's penal substitutionary death and bodily resurrection are central to the Gospel we proclaim.</p>
+        <p>The Gospel is not only the means by which people are saved, but the truth and power by which they are sanctified. It is central to our motivation, our community, and our mission.</p>
+        <p class="scripture-ref">Key texts:
+          <span class="verse-ref" tabindex="0" data-verse="For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes... For in it the righteousness of God is revealed from faith for faith. (ESV)">Rom. 1:16–17</span>;
+          <span class="verse-ref" tabindex="0" data-verse="Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures. (ESV)">1 Cor. 15:3–4</span>;
+          <span class="verse-ref" tabindex="0" data-verse="For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God. (ESV)">2 Cor. 5:21</span>
+        </p>
+      </div>
+
+      <div class="belief-card">
+        <h3>Salvation by Grace Alone</h3>
+        <p>We enthusiastically embrace the sovereignty of God's grace in saving sinners. Salvation is received by grace alone, through faith alone, in Christ alone. No ordinance, ritual, work, or any other activity on the part of man is required in order to be saved.</p>
+        <p>God chose us in Christ before the foundation of the world — not on the basis of foreseen faith, but unconditionally. His Spirit effectively draws the elect to faith, and those He has chosen will persevere in belief and godly behavior and be kept secure. This sovereignty does not diminish human responsibility to believe, nor does it lessen our urgency in prayer and evangelism.</p>
+        <p class="scripture-ref">Key texts:
+          <span class="verse-ref" tabindex="0" data-verse="For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast. (ESV)">Eph. 2:8–9</span>;
+          <span class="verse-ref" tabindex="0" data-verse="He chose us in him before the foundation of the world, that we should be holy and blameless before him. In love he predestined us for adoption to himself as sons through Jesus Christ. (ESV)">Eph. 1:4–5</span>;
+          <span class="verse-ref" tabindex="0" data-verse="I give them eternal life, and they will never perish, and no one will snatch them out of my hand. My Father, who has given them to me, is greater than all, and no one is able to snatch them out of the Father's hand. (ESV)">John 10:28–29</span>
+        </p>
+      </div>
+
+      <div class="belief-card">
+        <h3>The Holy Spirit</h3>
+        <p>We recognize and rest upon the necessity of the empowering presence of the Holy Spirit for all life and ministry. The Spirit is fully God, equal with the Father and the Son, whose primary ministry is to glorify the Lord Jesus Christ.</p>
+        <p>The Holy Spirit indwells every believer, sanctifies them progressively, and distributes spiritual gifts to each member of the body for ministry and the growth of the church. We affirm that these gifts are divine provisions central to spiritual growth and effective ministry, while recognizing that Christians hold diverse and sincere views about their nature and practice.</p>
+        <p class="scripture-ref">Key texts:
+          <span class="verse-ref" tabindex="0" data-verse="I will ask the Father, and he will give you another Helper, to be with you forever, even the Spirit of truth... You know him, for he dwells with you and will be in you. (ESV)">John 14:16–17</span>;
+          <span class="verse-ref" tabindex="0" data-verse="To each is given the manifestation of the Spirit for the common good... All these are empowered by one and the same Spirit, who apportions to each one individually as he wills. (ESV)">1 Cor. 12:7–11</span>;
+          <span class="verse-ref" tabindex="0" data-verse="The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law. (ESV)">Gal. 5:22–23</span>
+        </p>
+      </div>
+
+      <div class="belief-card">
+        <h3>Men, Women, and the Church</h3>
+        <p>We believe God created men and women as equal and complementary image bearers. Both men and women possess equal dignity before God, equal access to Him through Christ, and both receive spiritual gifts for ministry in the church and the world.</p>
+        <p>At the same time, we believe the office of elder is reserved for men who meet the qualifications set out in Scripture. Male headship in the home is to be characterized by loving, tender, and nurturing care — servant-leadership and sacrificial love modeled after Christ's love for the church.</p>
+        <p class="scripture-ref">Key texts:
+          <span class="verse-ref" tabindex="0" data-verse="So God created man in his own image, in the image of God he created him; male and female he created them. (ESV)">Gen. 1:27</span>;
+          <span class="verse-ref" tabindex="0" data-verse="I do not permit a woman to teach or to exercise authority over a man; she is to remain quiet. (ESV)">1 Tim. 2:12</span>;
+          <span class="verse-ref" tabindex="0" data-verse="If anyone aspires to the office of overseer, he desires a noble task. An overseer must be above reproach, the husband of one wife, sober-minded, self-controlled, respectable, hospitable, able to teach... (ESV)">1 Tim. 3:1–7</span>;
+          <span class="verse-ref" tabindex="0" data-verse="Husbands, love your wives, as Christ loved the church and gave himself up for her... This mystery is profound, and I am saying that it refers to Christ and the church. (ESV)">Eph. 5:25–33</span>
+        </p>
+      </div>
+
+      <div class="belief-card">
+        <h3>Mission</h3>
+        <p>Radiant Church embraces a missionary understanding of the local church. We are called to make Christ known through the Gospel and, by the power of the Holy Spirit, to bring His lordship to bear on every dimension of life.</p>
+        <p>Mission is not an optional program — it is an essential element in the identity of the church. We exist to equip the saints for ministry and to seek Jesus being known in our local community, across Alaska, and to the ends of the earth. We are a member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a>, a network of gospel-centered churches committed to planting and strengthening churches throughout Alaska.</p>
+        <p class="scripture-ref">Key texts:
+          <span class="verse-ref" tabindex="0" data-verse="All authority in heaven and on earth has been given to me. Go therefore and make disciples of all nations... And behold, I am with you always, to the end of the age. (ESV)">Matt. 28:18–20</span>;
+          <span class="verse-ref" tabindex="0" data-verse="You will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth. (ESV)">Acts 1:8</span>;
+          <span class="verse-ref" tabindex="0" data-verse="He gave the apostles, the prophets, the evangelists, the shepherds and teachers, to equip the saints for the work of ministry, for building up the body of Christ. (ESV)">Eph. 4:11–12</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="section-label section-label--gold" data-aos="fade-up">Questions?</span>
+    <h2 data-aos="fade-up" data-aos-delay="60">We'd love to talk</h2>
+    <p data-aos="fade-up" data-aos-delay="120">If you have questions about what we believe or want to learn more before visiting, reach out — we're happy to talk through any of it.</p>
+    <div class="btn-row btn-row--center" data-aos="fade-up" data-aos-delay="180">
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      <a href="about.html" class="btn btn-outline">&larr; Back to About</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a>
+        <p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gather.html">Sunday Gatherings</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="give.html">Give</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="new-here.html">New Here?</a></li>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Sundays at 11:00 AM</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p>
+      <p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

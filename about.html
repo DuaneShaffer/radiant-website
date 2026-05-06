@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Radiant Church Fairbanks</title>
+  <meta name="description" content="Learn about Radiant Church Fairbanks — our beliefs, mission, and leadership.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Who We Are</span>
+    <h1>About Radiant</h1>
+    <p>A gospel-centered community in Fairbanks, Alaska, devoted to knowing Christ and making Him known.</p>
+  </div>
+</header>
+
+<!-- MISSION -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col two-col--wide">
+      <div data-aos="fade-right">
+        <span class="section-label">Our Mission</span>
+        <h2>The glory of God, seen in the Gospel</h2>
+        <p>We believe the glory of God is seen most beautifully in the Gospel of Jesus Christ. Our mission is to make Christ known through that Gospel — in our neighborhood, our city, and across Alaska.</p>
+        <p>The church has a clear biblical mandate to look beyond its own community to the neighborhood, the nation, and the world. Mission is not an optional program; it is an essential element of who we are. We exist to equip the saints for ministry and to seek Jesus being known in our local community.</p>
+        <p class="mt-3">We are a member church of <strong>Plant AK</strong>, a network of gospel-centered churches committed to planting and strengthening churches throughout Alaska.</p>
+      </div>
+      <div class="pull-quote" data-aos="fade-left" data-aos-delay="100">
+        <blockquote>"The salvation offered in this gospel message is received by grace alone, through faith alone, in Christ alone."</blockquote>
+        <cite>— Radiant Church Statement of Faith</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELIEFS -->
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-label">Doctrines &amp; Beliefs</span>
+      <h2>What We Believe</h2>
+      <p>Our convictions are rooted in Scripture and held in community. <a href="doctrines.html">Read our full statement of faith &rarr;</a></p>
+    </div>
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
+      <div class="belief-card">
+        <h3>The Gospel</h3>
+        <p>The Gospel is the good news of what God has graciously accomplished for sinners through the sinless life, sacrificial death, and bodily resurrection of His Son, our Savior, Jesus Christ — our forgiveness from sin and complete justification before God. Christ's penal substitutionary death and bodily resurrection are central to our message.</p>
+      </div>
+      <div class="belief-card">
+        <h3>Grace Alone</h3>
+        <p>We enthusiastically embrace the sovereignty of God's grace in saving sinners. The Gospel is not only the means by which people are saved, but the truth and power by which people are sanctified. Salvation is received by grace alone, through faith alone, in Christ alone.</p>
+      </div>
+      <div class="belief-card">
+        <h3>The Holy Spirit</h3>
+        <p>We recognize and rest upon the necessity of the empowering presence of the Holy Spirit for all life and ministry. It is through the Spirit that we are transformed, empowered for mission, and drawn into deeper relationship with God.</p>
+      </div>
+      <div class="belief-card">
+        <h3>Scripture</h3>
+        <p>We believe the Bible is the inspired and authoritative Word of God — the final rule for faith and practice. All teaching at Radiant is grounded in careful, faithful exposition of Scripture, with the aim of equipping believers to handle the Word of God accurately.</p>
+      </div>
+      <div class="belief-card">
+        <h3>Mission</h3>
+        <p>Radiant Church embraces a missionary understanding of the local church. We are called to make Christ known through the Gospel and, by the power of the Holy Spirit, to bring His lordship to bear on every dimension of life.</p>
+      </div>
+      <div class="belief-card">
+        <h3>Community</h3>
+        <p>We believe the local church is God's primary means of establishing His kingdom on earth. Life is meant to be lived in community — worshiping together, discipling one another, and serving our neighbors in Fairbanks and beyond.</p>
+      </div>
+    </div>
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="doctrines.html" class="card-link">Read our full statement of faith &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="photo-break" data-aos="fade-in">
+  <img src="img/congregation-01.jpg" alt="Radiant Church congregation" style="object-position: center 20%;">
+</div>
+
+<!-- LEADERSHIP -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Leadership</span>
+      <h2>Elders &amp; Staff</h2>
+      <p>Radiant is an elder-led, elder-governed church. Elders are men called by God to serve as spiritual shepherds — giving themselves to prayer, the Word, teaching, and the care of the congregation.</p>
+    </div>
+
+    <h3 class="mb-3" data-aos="fade-up">Elders</h3>
+    <div class="card-grid mb-5" style="grid-template-columns: repeat(3, 1fr);" data-aos="fade-up" data-aos-delay="80">
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="img/leadership-ben.jpg" alt="Ben Widman">
+        </div>
+        <div class="leader-info">
+          <h4>Ben Widman</h4>
+          <span>Preaching, Vision &amp; Gospel Communities</span>
+          <a href="mailto:radiantfairbanks@gmail.com" class="leader-email">radiantfairbanks@gmail.com</a>
+        </div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="img/leadership-mike.jpg" alt="Mike Donaldson">
+        </div>
+        <div class="leader-info">
+          <h4>Mike Donaldson</h4>
+          <span>Family Ministries</span>
+          <a href="mailto:mike_d@radiantfairbanks.org" class="leader-email">mike_d@radiantfairbanks.org</a>
+        </div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="img/leadership-rick.jpg" alt="Rick Solie">
+        </div>
+        <div class="leader-info">
+          <h4>Rick Solie</h4>
+          <span>Finances</span>
+          <a href="mailto:radiantricksolie@gmail.com" class="leader-email">radiantricksolie@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mb-3" data-aos="fade-up">Deacons &amp; Staff</h3>
+    <div class="card-grid mb-4" style="grid-template-columns: repeat(3, 1fr);" data-aos="fade-up" data-aos-delay="80">
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="img/leadership-brandon.jpg" alt="Brandon Irvine">
+        </div>
+        <div class="leader-info">
+          <h4>Brandon Irvine</h4>
+          <span>Deacon of Worship</span>
+        </div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="img/leadership-amanda.jpg" alt="Amanda Thomas" style="object-position: center 40%;">
+        </div>
+        <div class="leader-info">
+          <h4>Amanda Thomas</h4>
+          <span>Church Administration</span>
+          <a href="mailto:admin@radiantfairbanks.org" class="leader-email">admin@radiantfairbanks.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANT AK -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="section-label section-label--gold" data-aos="fade-up">Network</span>
+    <h2 data-aos="fade-up" data-aos-delay="60">Part of Plant AK</h2>
+    <p data-aos="fade-up" data-aos-delay="120">Radiant Church Fairbanks is a member of Plant AK — a network of gospel-centered churches committed to planting and strengthening churches throughout Alaska for the glory of God.</p>
+    <a href="https://plantakchurch.org" target="_blank" rel="noopener" class="btn btn-outline" data-aos="fade-up" data-aos-delay="180">Learn about Plant AK &rarr;</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a>
+        <p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li>
+          <li><a href="gather.html">Sunday Gatherings</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="give.html">Give</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="new-here.html">New Here?</a></li>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Sundays at 11:00 AM</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p>
+      <p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

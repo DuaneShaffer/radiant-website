@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gospel Communities | Radiant Church Fairbanks</title>
+  <meta name="description" content="Gospel Communities are the small group ministry of Radiant Church Fairbanks — join a group for Bible study, prayer, and shared life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Community</span>
+    <h1>Gospel Communities</h1>
+    <p>Small groups where life is shared, Scripture is studied, and people are discipled throughout the week.</p>
+  </div>
+</header>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col two-col--wide">
+      <div data-aos="fade-right">
+        <span class="section-label">What Is a Gospel Community?</span>
+        <h2>Church happens all week long</h2>
+        <p>A Gospel Community (GC) is a small group of people — usually 8 to 16 — who gather regularly in someone's home to study Scripture, pray together, share meals, and encourage one another to live out the Gospel in everyday life.</p>
+        <p>At Radiant, we believe that Sunday is the gathering place, but GCs are where deep discipleship actually happens. Life in a GC means you know people and are known — you bear one another's burdens, celebrate together, and hold each other accountable to following Jesus.</p>
+        <p>GCs meet in various locations around Fairbanks on different days and times. Contact us to find a group that fits your schedule and neighborhood.</p>
+        <a href="mailto:admin@radiantfairbanks.org?subject=I want to join a Gospel Community" class="btn btn-primary mt-4">Find a Group</a>
+      </div>
+      <div class="pull-quote" data-aos="fade-left" data-aos-delay="100">
+        <blockquote>"And let us consider how to stir up one another to love and good works, not neglecting to meet together... but encouraging one another."</blockquote>
+        <cite>— Hebrews 10:24–25</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-label">What to Expect</span>
+      <h2>Life in a Gospel Community</h2>
+    </div>
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+          <h3>Scripture &amp; Discussion</h3>
+          <p>Each week the group studies God's Word together — often reflecting on the Sunday sermon or working through a book of the Bible. Discussion, questions, and honest engagement are all welcome.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+          <h3>Prayer Together</h3>
+          <p>GCs pray for one another — for health, jobs, families, and spiritual growth. Sharing prayer needs builds trust and reminds us that we depend on God in all of life.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+          <h3>Shared Life</h3>
+          <p>Beyond the formal meeting, GC members do life together — sharing meals, helping each other move, checking in during hard weeks, and serving the neighborhood as a missional unit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="card card--centered" data-aos="fade-up" x-data="{ active: null }">
+      <div class="card-body">
+        <span class="section-label">Common Questions</span>
+        <h3 style="margin-bottom:1.5rem;">GC FAQ</h3>
+        <div class="accordion-item">
+          <button class="accordion-trigger" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1">
+            Do I need to be a member to join a GC?
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="accordion-body" x-show="active === 1" x-transition>
+            <p>No — GCs are open to anyone attending Radiant, including newcomers and people still exploring faith. It's actually one of the best ways to get plugged in when you're new.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2">
+            How do I find a group near me?
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="accordion-body" x-show="active === 2" x-transition>
+            <p>Email us at <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a> or talk to someone on the welcome team on Sunday. We'll connect you with a GC leader in your area of the city.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3">
+            What if I want to start a GC?
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="accordion-body" x-show="active === 3" x-transition>
+            <p>We would love to help you get started. Reach out to <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a> and we'll walk you through our GC leader training and support process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2 data-aos="fade-up">Ready to join a community?</h2>
+    <p data-aos="fade-up" data-aos-delay="60">Don't do life alone. Reach out and we'll connect you with a Gospel Community that fits your schedule and neighborhood.</p>
+    <a href="mailto:admin@radiantfairbanks.org?subject=I want to join a Gospel Community" class="btn btn-primary" data-aos="fade-up" data-aos-delay="120">Get Connected</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a><p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p><div class="social-links"><a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a></div></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Visit Us</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p><p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

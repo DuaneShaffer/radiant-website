@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer &amp; Care | Radiant Church Fairbanks</title>
+  <meta name="description" content="Submit a prayer request or learn about pastoral care at Radiant Church Fairbanks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Care</span>
+    <h1>Prayer &amp; Pastoral Care</h1>
+    <p>You don't have to face hard things alone. We are a church family that prays, mourns, and rejoices together.</p>
+  </div>
+</header>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col">
+      <div data-aos="fade-right">
+        <span class="section-label">Pastoral Care</span>
+        <h2>We care for one another</h2>
+        <p>Life brings seasons of joy and seasons of deep difficulty — illness, loss, broken relationships, doubt, and grief. Radiant's elders and care team are committed to walking alongside members and regular attenders through whatever they're facing.</p>
+        <p>If you are going through something hard and need someone to talk to, pray with, or visit you — please reach out. No need is too small and no situation too complex. We want to point you to Christ and stand with you.</p>
+        <div class="mt-3">
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="info-row-text"><strong>Email Us</strong><span><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+            <div class="info-row-text"><strong>Talk to Us on Sunday</strong><span>Approach any elder or staff member before or after the service.</span></div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="pull-quote">
+          <blockquote>"Bear one another's burdens, and so fulfill the law of Christ."</blockquote>
+          <cite>— Galatians 6:2</cite>
+        </div>
+        <div class="card mt-4">
+          <div class="card-body">
+            <h3>Care Areas</h3>
+            <ul style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.75rem;">
+              <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;color:var(--orange);flex-shrink:0;"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                Prayer for illness, surgery, or health concerns
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;color:var(--orange);flex-shrink:0;"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                Support through grief and loss
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;color:var(--orange);flex-shrink:0;"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                Marriage and family counsel
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;color:var(--orange);flex-shrink:0;"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                Spiritual direction and counsel
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;color:var(--orange);flex-shrink:0;"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                Hospital and home visits
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRAYER REQUEST -->
+<section class="section section--card">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;" data-aos="fade-up">
+      <div class="section-header text-center">
+        <span class="section-label">Prayer Request</span>
+        <h2>Share what's on your heart</h2>
+        <p>Submit a prayer request and our elder team will pray for you. You can share as much or as little as you're comfortable with.</p>
+      </div>
+      <form action="mailto:admin@radiantfairbanks.org" method="get" enctype="text/plain">
+        <div class="form-group">
+          <label for="pr-name">Your Name</label>
+          <input type="text" id="pr-name" name="name" placeholder="First name is fine">
+        </div>
+        <div class="form-group">
+          <label for="pr-request">Your Prayer Request</label>
+          <textarea id="pr-request" name="body" placeholder="Share what you'd like us to pray for..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pr-private" style="display:flex;align-items:center;gap:0.5rem;font-weight:400;cursor:pointer;">
+            <input type="checkbox" id="pr-private" name="private" style="width:auto;accent-color:var(--orange);">
+            Keep this request private (elders only, not shared with the congregation)
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Prayer Request</button>
+        <p style="font-size:0.82rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">This opens your email client with your request pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a><p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p><div class="social-links"><a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a></div></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Visit Us</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p><p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

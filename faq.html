@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Radiant Church Fairbanks</title>
+  <meta name="description" content="Frequently asked questions about Radiant Church Fairbanks — what to expect, what we believe, and how to get connected.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Questions</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Answers to the most common things people wonder before visiting or getting connected at Radiant.</p>
+  </div>
+</header>
+
+<section class="section section--cream">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;" x-data="{ active: null }">
+
+      <h3 style="margin-bottom:1.5rem;margin-top:0;" data-aos="fade-up">Visiting for the First Time</h3>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1">
+          When and where do you meet?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 1" x-transition>
+          <p>We gather every Sunday at 11:00 AM at 949 Farmers Loop Road, Fairbanks, AK 99709. Free parking is available on site. Services typically run about 75–80 minutes. We're a congregation of around 100 adults — mostly young families — with a casual-to-Alaskan-formal dress culture.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 12 ? null : 12" :aria-expanded="active === 12">
+          What does a typical service look like?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 12" x-transition>
+          <p>Here's the flow of a typical Sunday:</p>
+          <ol style="margin-top:0.75rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;">
+            <li>Two opening worship songs</li>
+            <li>Prayer</li>
+            <li>Another song</li>
+            <li>Children's dismissal to Family Ministry classes</li>
+            <li>Bible reading</li>
+            <li>Sermon</li>
+            <li>Communion (taken together during the first song after the sermon)</li>
+            <li>Two closing songs</li>
+            <li>Final prayer</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2">
+          Do I need to be a Christian to come?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 2" x-transition>
+          <p>Not at all. Wherever you are on your spiritual journey — curious, skeptical, exploring, or somewhere in between — you are genuinely welcome here. We don't expect you to have everything figured out before you show up.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3">
+          What should I wear?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 3" x-transition>
+          <p>Come as you are — seriously. You'll see everything from jeans and hoodies to button-downs and dresses. There is no dress code, and no one is tracking what you wore.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4">
+          What happens with my kids?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 4" x-transition>
+          <p>We have <a href="family.html">Family Ministry</a> available for every age during the Sunday service:</p>
+          <ul style="margin-top:0.75rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;list-style:disc;">
+            <li><strong>Radiant Babies</strong> — ages 0–24 months</li>
+            <li><strong>Radiant Kids</strong> — ages 2–9</li>
+            <li><strong>Radiant Youth</strong> — ages 10 and up (meets 2nd &amp; 4th Sundays)</li>
+          </ul>
+          <p style="margin-top:0.75rem;">Kids check in via the Church Center app — first-timers can check in with our welcome team on arrival. You're also welcome to keep your children with you in the main service.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5">
+          Will I be asked to give money?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 5" x-transition>
+          <p>Giving is part of our Sunday worship, but it's for regular members and attenders — not guests. If an offering plate or box comes by, simply pass it along. No pressure, no guilt.</p>
+        </div>
+      </div>
+
+      <h3 style="margin:2.5rem 0 1.5rem;" data-aos="fade-up">What We Believe</h3>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6">
+          What denomination is Radiant?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 6" x-transition>
+          <p>Radiant is a non-denominational, gospel-centered church. We are a member of Plant AK, a network of churches committed to planting and strengthening gospel-centered congregations throughout Alaska. Our theology is broadly Reformed and evangelical, with strong convictions about grace, Scripture, and the centrality of the Gospel.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7">
+          What does Radiant believe about salvation?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 7" x-transition>
+          <p>We believe that salvation is received by grace alone, through faith alone, in Christ alone. No ordinance, ritual, work, or activity on the part of man is required in order to be saved. Christ's penal substitutionary death and bodily resurrection are central to the Gospel we proclaim.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 8 ? null : 8" :aria-expanded="active === 8">
+          Does Radiant practice communion and baptism?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 8" x-transition>
+          <p>Yes. We take communion together every Sunday as a church family — it's shared during the first song after the sermon. We practice believer's baptism by immersion as a public declaration of faith. If you'd like to be baptized or learn more, reach out at <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a>.</p>
+        </div>
+      </div>
+
+      <h3 style="margin:2.5rem 0 1.5rem;" data-aos="fade-up">Getting Connected</h3>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 9 ? null : 9" :aria-expanded="active === 9">
+          How do I become a member?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 9" x-transition>
+          <p>Membership at Radiant begins with attending regularly and getting connected in a Gospel Community. Reach out to us at <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a> and we'll walk you through the next steps.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 10 ? null : 10" :aria-expanded="active === 10">
+          Can I watch online if I can't make it in person?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 10" x-transition>
+          <p>Yes. We livestream on our <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener">YouTube channel</a> every Sunday and maintain a full sermon archive there and on the <a href="https://radiantfairbanks.churchcenter.com" target="_blank" rel="noopener">Church Center app</a>.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 11 ? null : 11" :aria-expanded="active === 11">
+          What is a Gospel Community and how do I join one?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 11" x-transition>
+          <p>Gospel Communities are our small groups — typically 8–16 people who meet weekly in homes for Bible study, prayer, and shared life. They're the primary context for discipleship at Radiant. Email us at <a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a> or see <a href="gospel-communities.html">our GC page</a> to find a group near you.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <button class="accordion-trigger" @click="active = active === 13 ? null : 13" :aria-expanded="active === 13">
+          Does Radiant do community outreach?
+          <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="accordion-body" x-show="active === 13" x-transition>
+          <p>Yes — we partner with several local organizations serving Fairbanks, including Young Life, Safe Families for Children, Fyndout Free, and The Rescue Mission. We're also connected to Alaska-wide church networks and global mission organizations. See our <a href="partners.html">Partner Together page</a> for the full picture.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem;padding:2rem;background:var(--card-bg);border-radius:var(--radius-lg);text-align:center;" data-aos="fade-up">
+        <p style="margin-bottom:1rem;">Still have questions? We'd love to hear from you.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a><p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p><div class="social-links"><a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a></div></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Visit Us</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p><p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

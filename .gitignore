@@ -1,0 +1,9 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Dev artifacts
+CLAUDE.md
+church_website_research.md
+live-site-audit/
+radiantfairbanks.org/

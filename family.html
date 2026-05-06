@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Ministry | Radiant Church Fairbanks</title>
+  <meta name="description" content="Family Ministry at Radiant Church Fairbanks — safe, gospel-centered ministry for children and youth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Kids &amp; Families</span>
+    <h1>Family Ministry</h1>
+    <p>Discipling children in the ways of Jesus — at home, in community, and together on Sundays.</p>
+  </div>
+</header>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="two-col two-col--wide">
+      <div data-aos="fade-right">
+        <span class="section-label">Our Philosophy</span>
+        <h2>Parents as primary disciplers</h2>
+        <p>We believe God has called parents to raise their children in the ways and truths of God. Parents are primarily responsible for training their children to live out their gospel identity in everyday rhythms of life as followers of Jesus — and in this way both parents and children grow in the knowledge and grace of our Lord Jesus.</p>
+        <p>This means we see discipleship for our kids happening in the everyday activities of life, as our families live gospel-centered lives on Jesus' mission. We want our kids to grow up seeing people of all walks of life learning to live in the ways of grace — discipled in our homes, in our neighborhoods, and in our regular lives.</p>
+        <p>When we gather as a whole church on Sundays, there are special opportunities for our children to be together as they grow and learn how to walk in the ways of Jesus. Each class is a combination of age-appropriate Bible stories, games, and activities, all focused on helping our kids <strong>understand God's Story, believe God's Son, and walk as God's people.</strong></p>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="card-featured">
+          <span class="series-label">Sunday Programs</span>
+          <h3>Classes for every age</h3>
+          <div class="mt-2">
+            <div class="info-row">
+              <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+              <div class="info-row-text"><strong>Radiant Babies</strong><span>Ages 0–24 months</span></div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+              <div class="info-row-text"><strong>Radiant Kids</strong><span>Ages 2–9 years</span></div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.2 20a7 7 0 0113.6 0"/></svg></div>
+              <div class="info-row-text"><strong>Radiant Youth</strong><span>Ages 10 and up</span></div>
+            </div>
+          </div>
+          <p class="mt-3" style="font-size:0.9rem;opacity:0.8;">Child check-in uses the Church Center app. First-timers can check in with our team at the welcome table — plan to arrive a few minutes early on your first visit.</p>
+          <div class="app-badges mt-2">
+            <a href="https://apps.apple.com/app/church-center/id1357742931" target="_blank" rel="noopener" class="app-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter" target="_blank" rel="noopener" class="app-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M3.18 23.76a2 2 0 001.84-.28l11.04-6.37-2.72-2.72L3.18 23.76zm15.24-8.79L5.76 8.13 3.18.24a2 2 0 00-1.84-.28L3.82 8.4l11.56 6.67 3.04-1.1zm-1.26 7.23L3.82 15.6l-2.48 8.44a2 2 0 001.84-.28l13.98-8.04-.02-.32zm4.12-10.96L17.6 9.04 14.24 12l3.36 2.96 3.72-2.12a1.67 1.67 0 00-.04-3.2z"/></svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="photo-break" data-aos="fade-in">
+  <img src="img/family-ministry.jpg" alt="Children at Radiant Kids">
+</div>
+
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Serve</span>
+      <h2>How can you help?</h2>
+    </div>
+    <div class="card-grid card-grid--4" data-aos="fade-up" data-aos-delay="80">
+      <div class="ministry-card">
+        <h4>Teacher</h4>
+        <p>Lead a class through age-appropriate Bible stories, activities, and gospel-centered discussion.</p>
+      </div>
+      <div class="ministry-card">
+        <h4>Helper</h4>
+        <p>Support the lead teacher and assist with crafts, games, and caring for kids during class.</p>
+      </div>
+      <div class="ministry-card">
+        <h4>Kids Check-In</h4>
+        <p>Welcome families at the door, help with secure check-in, and make the drop-off experience smooth.</p>
+      </div>
+      <div class="ministry-card">
+        <h4>Nursery</h4>
+        <p>Care for our youngest — infants through 24 months — while their parents worship in the main service.</p>
+      </div>
+    </div>
+    <p class="text-center mt-4" style="color:var(--charcoal);opacity:0.75;font-size:0.95rem;" data-aos="fade-up" data-aos-delay="100">A background check is required for all family ministry volunteers. Email us to get started.</p>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Resources</span>
+      <h2>Take it home</h2>
+      <p>Materials your family can use throughout the week — and everything volunteers need to serve well.</p>
+    </div>
+    <div class="two-col" data-aos="fade-up" data-aos-delay="80">
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:1rem;">For Families</h3>
+        <ul class="resource-list">
+          <li>
+            <a href="https://radiantfairbanks.org/rk/MemoryVerseReviewActivities.pdf" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              Memory Verse Review Activities
+            </a>
+          </li>
+          <li>
+            <a href="https://radiantfairbanks.org/rk/aCapellaSongs.pdf" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+              Acapella Kid Songs
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:1rem;">For Volunteers</h3>
+        <ul class="resource-list">
+          <li>
+            <a href="https://radiantalaska.org/radiantKids/SOG2/RadiantKidsLessons.html" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Story of God Lesson &amp; Resource Archive
+            </a>
+          </li>
+          <li>
+            <a href="https://radiantalaska.org/radiantKids/JSB" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Jesus Storybook Bible Resource Archive
+            </a>
+          </li>
+          <li>
+            <a href="https://radiantfairbanks.org/rk/Radiant%20Kids%20Notebook%20ver.%201.1.pdf" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Servant Handbook
+            </a>
+          </li>
+          <li>
+            <a href="https://radiantfairbanks.org/rk/Radiant%20Kids%20Coordinators.pdf" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Coordinator Roles
+            </a>
+          </li>
+          <li>
+            <a href="https://radiantfairbanks.org/rk/Radiant%20Kids%20Sunday%20Morning%20Basics.pdf" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Sunday Morning Basics
+            </a>
+          </li>
+        </ul>
+        <div x-data="{ open: false }" style="margin-top:1.5rem;">
+          <button @click="open = !open" :aria-expanded="open" style="display:flex;align-items:center;gap:0.4rem;background:none;border:none;padding:0;cursor:pointer;font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;">
+            Ministry Foundations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="14" height="14" :style="{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <ul class="resource-list" x-show="open" x-transition style="margin-top:0.75rem;">
+            <li>
+              <a href="https://radiantfairbanks.org/gy/learn/GospelYouthBigPictureTruths.pdf" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                The Essence of Being a Child of God
+              </a>
+            </li>
+            <li>
+              <a href="https://radiantfairbanks.org/gy/precepts/TheologicalPillarsRadiantKidsAndYouth.pdf" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Theological Pillars for Radiant Kids &amp; Youth
+              </a>
+            </li>
+            <li>
+              <a href="https://radiantfairbanks.org/gy/learn/RightlyHandlingTheWordOfTruth.pdf" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Rightly Handling the Word of Truth
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2 data-aos="fade-up">Questions about Family Ministry?</h2>
+    <p data-aos="fade-up" data-aos-delay="60">We'd love to connect before your first Sunday — reach out and we'll walk you through what to expect for your kids.</p>
+    <a href="mailto:admin@radiantfairbanks.org?subject=Question about Family Ministry" class="btn btn-primary" data-aos="fade-up" data-aos-delay="120">Email Us</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a><p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p><div class="social-links"><a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a></div></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Visit Us</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p><p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

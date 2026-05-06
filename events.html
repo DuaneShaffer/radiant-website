@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Radiant Church Fairbanks</title>
+  <meta name="description" content="Upcoming events at Radiant Church Fairbanks — gatherings, community events, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="section-label section-label--gold">Calendar</span>
+    <h1>Events</h1>
+    <p>Everything happening at Radiant — special gatherings, community events, and ongoing rhythms of life together.</p>
+  </div>
+</header>
+
+<!-- RECURRING -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Every Week</span>
+      <h2>Regular Gatherings</h2>
+    </div>
+    <div class="card-grid card-grid--2" data-aos="fade-up" data-aos-delay="80">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+          <h3>Sunday Gathering</h3>
+          <p class="sermon-meta" style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">Every Sunday &nbsp;·&nbsp; 11:00 AM &nbsp;·&nbsp; 949 Farmers Loop Road</p>
+          <p>Our weekly gathering for worship, the Word, and community. All are welcome — no reservation needed.</p>
+          <a href="gather.html" class="card-link mt-2" style="display:inline-flex;margin-top:0.75rem;">Learn more &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+          <h3>Gospel Communities</h3>
+          <p class="sermon-meta" style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">Various days &amp; locations throughout the week</p>
+          <p>Small groups meeting in homes across Fairbanks for Bible study, prayer, and shared life. The best way to go deeper at Radiant.</p>
+          <a href="gospel-communities.html" class="card-link mt-2" style="display:inline-flex;margin-top:0.75rem;">Find a group &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS -->
+<section class="section section--card">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Coming Up</span>
+      <h2>Upcoming Events</h2>
+      <p>For the full event calendar and RSVP links, use the Church Center app.</p>
+    </div>
+    <div class="event-list" data-aos="fade-up" data-aos-delay="80">
+      <div class="event-card">
+        <div class="event-date"><span class="month">May</span><span class="day">11</span></div>
+        <div class="event-body">
+          <h4>Mother's Day Sunday Gathering</h4>
+          <p class="event-meta">Sunday &nbsp;·&nbsp; 11:00 AM &nbsp;·&nbsp; 949 Farmers Loop Road</p>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Join us for a special Mother's Day service — all are welcome.</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><span class="month">May</span><span class="day">17</span></div>
+        <div class="event-body">
+          <h4>Men's Breakfast</h4>
+          <p class="event-meta">Saturday &nbsp;·&nbsp; 8:00 AM &nbsp;·&nbsp; Location TBD</p>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Men of all ages are invited to gather for food, fellowship, and encouragement from Scripture.</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><span class="month">Jun</span><span class="day">7</span></div>
+        <div class="event-body">
+          <h4>Church Cookout</h4>
+          <p class="event-meta">Saturday &nbsp;·&nbsp; 5:00 PM &nbsp;·&nbsp; Location TBD</p>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">A summer evening of food, games, and community. Bring your family and invite your neighbors.</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><span class="month">Jun</span><span class="day">22</span></div>
+        <div class="event-body">
+          <h4>Gospel Community Leaders Gathering</h4>
+          <p class="event-meta">Sunday &nbsp;·&nbsp; 1:00 PM &nbsp;·&nbsp; 949 Farmers Loop Road</p>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">A quarterly gathering for GC leaders to connect, pray, and receive vision and training.</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><span class="month">Jul</span><span class="day">12</span></div>
+        <div class="event-body">
+          <h4>Women's Summer Retreat</h4>
+          <p class="event-meta">Saturday &nbsp;·&nbsp; All Day &nbsp;·&nbsp; Location TBD</p>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">A day away for the women of Radiant — teaching, prayer, and rest. Registration details coming soon.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" data-aos="fade-up">
+      <a href="https://radiantfairbanks.churchcenter.com/registrations" target="_blank" rel="noopener" class="btn btn-outline-dark">Full Calendar on Church Center &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2 data-aos="fade-up">Stay in the loop</h2>
+    <p data-aos="fade-up" data-aos-delay="60">Download the Church Center app to get notified about upcoming events, RSVP, and stay connected with the Radiant community.</p>
+    <a href="gather.html#church-center" class="btn btn-primary" data-aos="fade-up" data-aos-delay="120">Get the App</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="52"></a>
+        <p>"Those who look to Him are radiant, and their faces shall never be ashamed." — Psalm 34:5</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadiantChurchFairbanks" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/radiantfairbanks" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="doctrines.html">What We Believe</a></li><li><a href="gather.html">Sunday Gatherings</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="new-here.html">New Here?</a></li><li><a href="gospel-communities.html">Gospel Communities</a></li><li><a href="family.html">Family Ministry</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="prayer.html">Prayer &amp; Care</a></li><li><a href="partners.html">Partner Together</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>949 Farmers Loop Road<br>Fairbanks, AK 99709</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sundays at 11:00 AM</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@radiantfairbanks.org">admin@radiantfairbanks.org</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radiant Church Fairbanks &mdash; A member of <a href="https://plantakchurch.org" target="_blank" rel="noopener">Plant AK</a></p>
+      <p>Mailing: P.O. Box 72495, Fairbanks, AK 99707</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
