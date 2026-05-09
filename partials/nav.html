@@ -1,0 +1,30 @@
+<nav class="site-nav" x-data="{ menuOpen: false }">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="img/radiant-logo.png" alt="Radiant Church Fairbanks" height="44"></a>
+    <button class="nav-toggle" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'nav-open': menuOpen }">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gather.html">Gather</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li class="has-dropdown" x-data="{ open: false }">
+        <button class="dropdown-toggle" @click="open = !open" @click.outside="open = false" :aria-expanded="open">
+          Connect
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu" x-show="open" x-transition>
+          <li><a href="gospel-communities.html">Gospel Communities</a></li>
+          <li><a href="family.html">Family Ministry</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="prayer.html">Prayer &amp; Care</a></li>
+          <li><a href="partners.html">Partner Together</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="new-here.html" class="btn-nav">New Here?</a></li>
+    </ul>
+  </div>
+</nav>
