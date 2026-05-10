@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav-links a[href]').forEach(link => {
     if (link.getAttribute('href') === page) {
       link.classList.add('active');
+      const parentDropdown = link.closest('.has-dropdown');
+      if (parentDropdown) {
+        parentDropdown.querySelector('.dropdown-toggle').classList.add('active');
+      }
     }
   });
 });
