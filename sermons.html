@@ -156,47 +156,38 @@
       <span class="section-label">Recent Messages</span>
       <h2>Recent Messages</h2>
     </div>
-    <div class="card-grid card-grid--3" id="recent-sermons" data-aos="fade-up" data-aos-delay="80">
+    <div class="card-grid card-grid--3" data-aos="fade-up" data-aos-delay="80">
       <div class="sermon-card">
-        <div class="sermon-thumb">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-          <div class="play-btn">
-            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
+        <div class="sermon-thumb" style="background:url('https://i.ytimg.com/vi/A7D9Qf6sLmk/hqdefault.jpg') center/cover;color:transparent">
+          <div class="play-btn"><svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
         <div class="sermon-body">
           <span class="series-label">Psalms</span>
-          <h4>Greater Love</h4>
-          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; June 14, 2026</p>
-          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+          <h4>Sunday Gathering at Pioneer Park 5/31/2020</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; May 31, 2020</p>
+          <a href="https://www.youtube.com/watch?v=A7D9Qf6sLmk" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
         </div>
       </div>
       <div class="sermon-card">
-        <div class="sermon-thumb">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-          <div class="play-btn">
-            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
+        <div class="sermon-thumb" style="background:url('https://i.ytimg.com/vi/c34yXJGB7IE/hqdefault.jpg') center/cover;color:transparent">
+          <div class="play-btn"><svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
         <div class="sermon-body">
           <span class="series-label">Psalms</span>
-          <h4>God Puts Up and God Takes Down</h4>
-          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; June 7, 2026</p>
-          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+          <h4>Sunday Message</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; May 24, 2020</p>
+          <a href="https://www.youtube.com/watch?v=c34yXJGB7IE" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
         </div>
       </div>
       <div class="sermon-card">
-        <div class="sermon-thumb">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-          <div class="play-btn">
-            <svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
+        <div class="sermon-thumb" style="background:url('https://i.ytimg.com/vi/HQFOcoRpar4/hqdefault.jpg') center/cover;color:transparent">
+          <div class="play-btn"><svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
         <div class="sermon-body">
           <span class="series-label">Psalms</span>
-          <h4><!-- TODO: add title --></h4>
-          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; May 31, 2026</p>
-          <a href="https://www.youtube.com/@radiantfairbanks4982" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
+          <h4>Sunday Online Gathering 05.17.2020</h4>
+          <p class="sermon-meta">Ben Widman &nbsp;·&nbsp; May 17, 2020</p>
+          <a href="https://www.youtube.com/watch?v=HQFOcoRpar4" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
         </div>
       </div>
     </div>
@@ -261,44 +252,5 @@
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="js/main.js"></script>
-<script>
-(function () {
-  var API_KEY = 'YOUR_YOUTUBE_API_KEY';
-  var PLAYLIST_ID = 'PLEWJuYST1lj5t-DD7Rt7o6n45EGEAB6yH';
-  var SERIES = 'Psalms';
-
-  var grid = document.getElementById('recent-sermons');
-  if (!grid || API_KEY === 'YOUR_YOUTUBE_API_KEY') return;
-
-  var playBtn = '<div class="play-btn"><svg class="sermon-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>';
-  var fallbackIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>';
-
-  fetch('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + PLAYLIST_ID + '&maxResults=3&key=' + API_KEY)
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (!data.items || !data.items.length) return;
-      grid.innerHTML = data.items.map(function (item) {
-        var s = item.snippet;
-        var videoId = s.resourceId.videoId;
-        var thumb = (s.thumbnails.maxres || s.thumbnails.high || s.thumbnails.medium || {}).url;
-        var date = new Date(s.videoPublishedAt || s.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-        var thumbStyle = thumb ? 'background:url(\'' + thumb + '\') center/cover;color:transparent' : '';
-        return '<div class="sermon-card">'
-          + '<div class="sermon-thumb" style="' + thumbStyle + '">'
-          + (thumb ? '' : fallbackIcon)
-          + playBtn
-          + '</div>'
-          + '<div class="sermon-body">'
-          + '<span class="series-label">' + SERIES + '</span>'
-          + '<h4>' + s.title + '</h4>'
-          + '<p class="sermon-meta">Ben Widman &nbsp;&middot;&nbsp; ' + date + '</p>'
-          + '<a href="https://www.youtube.com/watch?v=' + videoId + '" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>'
-          + '</div></div>';
-      }).join('');
-      if (window.AOS) AOS.refresh();
-    })
-    .catch(function () {});
-}());
-</script>
 </body>
 </html>
