@@ -6,9 +6,14 @@ const ROOT = __dirname;
 const SRC_DIR = path.join(ROOT, 'src');
 const PARTIALS_DIR = path.join(ROOT, 'partials');
 
-const SERMON_PLAYLIST = 'PLEWJuYST1lj5t-DD7Rt7o6n45EGEAB6yH';
+// ─── Update these when the series changes ────────────────────────────────────
+const SERIES_NAME = 'Psalms';
+const SERIES_DESCRIPTION = 'The Psalms are the prayerbook of God\'s people — songs of praise, lament, confession, and trust that have shaped the worship of the church for thousands of years. We\'re working through a selection of Psalms, letting their words become our words as we learn to bring all of life before God.';
 const SERMON_SPEAKER = 'Ben Widman';
-const SERMON_SERIES = 'Psalms'; // update when series changes
+const SERMON_PLAYLIST = 'PLEWJuYST1lj5t-DD7Rt7o6n45EGEAB6yH';
+// ─────────────────────────────────────────────────────────────────────────────
+
+const COPYRIGHT_YEAR = new Date().getFullYear();
 
 function fetchUrl(url) {
   return new Promise((resolve, reject) => {
@@ -41,7 +46,7 @@ function buildSermonCards(xml) {
           ${playBtn}
         </div>
         <div class="sermon-body">
-          <span class="series-label">${SERMON_SERIES}</span>
+          <span class="series-label">${SERIES_NAME}</span>
           <h4>${title}</h4>
           <p class="sermon-meta">${SERMON_SPEAKER} &nbsp;·&nbsp; ${date}</p>
           <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener" class="card-link">Watch &rarr;</a>
@@ -80,6 +85,10 @@ async function build() {
     content = content.replace('<!--FOOTER-->', partials.FOOTER);
     content = content.replace('<!--SCRIPTS-->', partials.SCRIPTS);
     if (sermonCards) content = content.replace('<!--SERMON_CARDS-->', sermonCards);
+    content = content.replace(/<!--SERIES_NAME-->/g, SERIES_NAME);
+    content = content.replace(/<!--SERIES_DESCRIPTION-->/g, SERIES_DESCRIPTION);
+    content = content.replace(/<!--SERMON_SPEAKER-->/g, SERMON_SPEAKER);
+    content = content.replace(/<!--COPYRIGHT_YEAR-->/g, COPYRIGHT_YEAR);
 
     fs.writeFileSync(outPath, content, 'utf8');
     console.log(`  built: ${filename}`);
